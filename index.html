@@ -11,14 +11,34 @@
     <!-- Font Awesome lib -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="app">
-       
+            
+        <div class="container">
+            <!-- Genera l'array di oggetti all'intrno del div, per poi andare a richiamare le chiavi bind dove necessario all'interno. -->
+            <div id="images" class="images" v-for="(oggetto, index) in slides" :key="index" >
+                <!-- Immagini generate JS -->
+                <!-- <img v-for="oggetto in slides" :src="oggetto.immagine" class="img"> -->
+                <h1>{{oggetto.titolo}}</h1>
+                <h3>{{oggetto.descrizione}}</h3>
+                <img :src="oggetto.immagine" alt="">
+            </div>
+            <div id="arrow-buttons" class="buttons text-center">
+                <button @click="back()" id="btn-back" class="btn"><i class="fas fa-arrow-left text-white"></i></button>
+                <button @click="next()" id="btn-next" class="btn"><i class="fas fa-arrow-right text-white"></i></button>
+            </div>
+            <div id="media-buttons" class="buttons text-center">
+                <button id="btn-reverse" class="btn"><i class="fas fa-backward text-white"></i></button>
+                <button id="btn-play" class="btn"><i class="fas fa-play text-white"></i></button>
+                <button id="btn-pause" class="btn"><i class="fas fa-pause text-white"></i></button>
+            </div>
+        </div>
+
     </div>
     
     <!-- JS -->
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
