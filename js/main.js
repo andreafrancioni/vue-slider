@@ -23,7 +23,27 @@ const opzioni = {
             ],
             slideNumber: 0,
 
+
         }
+    },
+    method: {
+
+            nextSlide(){
+                if(this.slideNumber < this.slides.length-1){
+                    this.slideNumber++;
+                }else{
+                    this.slideNumber = 0;
+                }
+            },
+
+            backSlide(){
+                if(this.slideNumber > 0){
+                    this.slideNumber--;
+            }else{
+                this.slideNumber = this.slides.length-1;
+            }
+
+            },
     }
 };
 

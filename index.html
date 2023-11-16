@@ -26,8 +26,8 @@
                 <img :src="slides[slideNumber].immagine" alt="">
             </div>
             <div id="arrow-buttons" class="buttons text-center">
-                <button @click="back()" id="btn-back"><i class="fas fa-arrow-left text-white"></i></button>
-                <button @click="next()" id="btn-next"><i class="fas fa-arrow-right text-white"></i></button>
+                <button @click="backSlide()" id="btn-back"><i class="fas fa-arrow-left text-white"></i></button>
+                <button @click="nextSlide()" id="btn-next"><i class="fas fa-arrow-right text-white"></i></button>
             </div>
             <!-- <div id="media-buttons" class="buttons text-center">
                 <button id="btn-reverse" class="btn"><i class="fas fa-backward text-white"></i></button>
