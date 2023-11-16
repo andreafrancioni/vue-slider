@@ -26,7 +26,7 @@ const opzioni = {
 
         }
     },
-    method: {
+    methods: {
 
             nextSlide(){
                 if(this.slideNumber < this.slides.length-1){
