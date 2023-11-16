@@ -18,22 +18,22 @@
             
         <div class="container">
             <!-- Genera l'array di oggetti all'intrno del div, per poi andare a richiamare le chiavi bind dove necessario all'interno. -->
-            <div id="images" class="images" v-for="(oggetto, index) in slides" :key="index" >
+            <div id="images" class="images">
                 <!-- Immagini generate JS -->
                 <!-- <img v-for="oggetto in slides" :src="oggetto.immagine" class="img"> -->
-                <h1>{{oggetto.titolo}}</h1>
-                <h3>{{oggetto.descrizione}}</h3>
-                <img :src="oggetto.immagine" alt="">
+                <h1>{{slides[slideNumber].titolo}}</h1>
+                <h3>{{slides[slideNumber].descrizione}}</h3>
+                <img :src="slides[slideNumber].immagine" alt="">
             </div>
             <div id="arrow-buttons" class="buttons text-center">
-                <button @click="back()" id="btn-back" class="btn"><i class="fas fa-arrow-left text-white"></i></button>
-                <button @click="next()" id="btn-next" class="btn"><i class="fas fa-arrow-right text-white"></i></button>
+                <button @click="back()" id="btn-back"><i class="fas fa-arrow-left text-white"></i></button>
+                <button @click="next()" id="btn-next"><i class="fas fa-arrow-right text-white"></i></button>
             </div>
-            <div id="media-buttons" class="buttons text-center">
+            <!-- <div id="media-buttons" class="buttons text-center">
                 <button id="btn-reverse" class="btn"><i class="fas fa-backward text-white"></i></button>
                 <button id="btn-play" class="btn"><i class="fas fa-play text-white"></i></button>
                 <button id="btn-pause" class="btn"><i class="fas fa-pause text-white"></i></button>
-            </div>
+            </div> -->
         </div>
 
     </div>
